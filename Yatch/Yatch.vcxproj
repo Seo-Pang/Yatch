@@ -129,6 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Yatch.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Chart.h" />
+    <ClInclude Include="Dice.h" />
+    <ClInclude Include="Yatch.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
