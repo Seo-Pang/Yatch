@@ -38,7 +38,6 @@ protected:
 	virtual int calculate(Dice dice_list[])
 	{
 		int sum = 0;
-		set_point(0);
 		for (int i = 0; i < 5; i++)
 		{
 			
@@ -62,14 +61,23 @@ public:
 
 };
 
-class ChartChance : public Chart
+class ChanceChart : public Chart
 {
 protected:
 	virtual int calculate(Dice dice_list[])
 	{	
-		int sum;
-
+		int sum = 0;
+		for (int i = 0; i < 5; i++)
+		{
+				sum += dice_list[i].get_eyes();
+		}
 		return sum;
+	}
+public:
+	ChanceChart() { ; }
+	int get_info()
+	{
+		return 7;
 	}
 };
 

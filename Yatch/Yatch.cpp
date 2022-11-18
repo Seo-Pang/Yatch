@@ -9,16 +9,20 @@ int main()
 {
 	srand(time(NULL));
 	NumberChart nuc(6);
+	ChanceChart chc;
 	Dice dc[5];
 
-
+	cout << "DICE: ";
 	for (int i = 0; i < 5; i++)
 	{
 		dc[i].roll();
-		cout << dc[i].get_eyes() << endl;
+		cout << dc[i].get_eyes() << " ";
 	}
+	cout << endl;
 
 	nuc.charting(dc);
-	cout << nuc.get_info()  << " Chart Point : " << nuc.get_point();
+	chc.charting(dc);
+	cout << nuc.get_info()  << " Chart Point : " << nuc.get_point() << endl;
+	cout << chc.get_info() << " Chart Point : " << chc.get_point() << endl;
 
 }
