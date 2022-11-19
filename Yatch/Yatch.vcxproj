@@ -132,6 +132,8 @@
   <ItemGroup>
     <ClInclude Include="Chart.h" />
     <ClInclude Include="Dice.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="UI.h" />
     <ClInclude Include="Yatch.h" />
   </ItemGroup>
   <ItemGroup>

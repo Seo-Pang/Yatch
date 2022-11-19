@@ -24,5 +24,4 @@ int main()
 	chc.charting(dc);
 	cout << nuc.get_info()  << " Chart Point : " << nuc.get_point() << endl;
 	cout << chc.get_info() << " Chart Point : " << chc.get_point() << endl;
-
 }
