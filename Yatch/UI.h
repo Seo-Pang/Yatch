@@ -57,12 +57,14 @@ void UI::Main_menu() {
 	}
 }
 
-void UI::Help_menu() {
+void UI::Help_menu() 
+{
 
 }
 
-int UI::Ingame_menu() {
-
+int UI::Ingame_menu() 
+{
+	return 0;
 }
 
 void UI::Endgame_menu() {

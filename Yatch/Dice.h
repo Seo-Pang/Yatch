@@ -26,6 +26,11 @@ class Dice
 private:
 	int eyes = 0;
 public:
+	Dice()
+	{
+		eyes = 0;
+	}
+
 	//주사위의 눈(1~6)을 무작위로 배치하는 함수
 	void roll()
 	{
@@ -35,6 +40,11 @@ public:
 	int get_eyes()
 	{
 		return eyes;
+	}
+
+	void set_eyes(int num)
+	{
+		this->eyes = num;
 	}
 
 };
