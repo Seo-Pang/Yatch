@@ -380,11 +380,13 @@ int YatchGame::play_game(int player_number) {
 		}
 	}
 
+
 	int high_score = 0;
 	int high_user = 0;
 
 	for (int i = 0; i < player_number; i++) {
 		if (player[i].get_point() > high_score) {
+			player[i].add_bonus();
 			high_score = player[i].get_point();
 			high_user = i;
 		}

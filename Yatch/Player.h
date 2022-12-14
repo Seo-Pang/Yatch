@@ -27,6 +27,7 @@ public:
 	void check_bonus();
 	int get_result();
 	int get_bonus();
+	void add_bonus();
 
 	//플레이어가 족보를 사용했는지 확인하는 함수
 	string get_chartused(int n);

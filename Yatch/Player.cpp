@@ -69,6 +69,10 @@ int Player::get_bonus() {
 	return this->bonus;
 }
 
+void Player::add_bonus() {
+	this->point += this->bonus;
+}
+
 string Player::get_chartused(int n) {
 	if (this->cht[n - 1]->get_used()) {
 		return "¡Ü";
