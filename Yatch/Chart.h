@@ -34,6 +34,9 @@ public:
 	//점수를 반환하는 함수
 	int get_point();
 
+	//UI.h 한정 사용 (표기되는 점수를 설정)
+	void set_UIpoint(int n);
+
 	void set_used();
 	bool get_used();
 
