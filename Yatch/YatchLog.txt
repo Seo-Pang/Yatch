@@ -1,30 +1,15 @@
-따라큐의 점수: 65
-따라큐의 차트: 
-1 NumberChart Point: 1
-2 NumberChart Point: 2
-3 NumberChart Point: 3
-4 NumberChart Point: 4
-5 NumberChart Point: 5
-6 NumberChart Point: 12
-ChanceChart Point: 13
-Four of a KindChart Point: 0
-FullhouseChart Point: 25
-Small StraightChart Point: 0
-Large StraightChart Point: 0
-YatchChart Point: 0
-
-강문석의 점수: 38
-강문석의 차트: 
-1 NumberChart Point: 0
+수뭉이의 점수: 140
+수뭉이의 차트: 
+1 NumberChart Point: 3
 2 NumberChart Point: 4
 3 NumberChart Point: 6
-4 NumberChart Point: 4
+4 NumberChart Point: 12
 5 NumberChart Point: 0
-6 NumberChart Point: 6
-ChanceChart Point: 18
+6 NumberChart Point: 24
+ChanceChart Point: 11
 Four of a KindChart Point: 0
-FullhouseChart Point: 0
-Small StraightChart Point: 0
-Large StraightChart Point: 0
+FullhouseChart Point: 25
+Small StraightChart Point: 25
+Large StraightChart Point: 30
 YatchChart Point: 0
 

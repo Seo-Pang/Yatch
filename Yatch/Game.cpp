@@ -385,7 +385,9 @@ void  YatchGame::multigame()
 	int max_index = max_element(v.begin(), v.end()) - v.begin();
 
 	system("cls");
+	cout << "게임이 종료되었습니다.";
 	cout << "\n\n\n" << player[max_index].get_name() << "가 승리했습니다.";
+	cout << player[max_index].get_name() << "의 점수 : " << player[max_index].get_point() <<"점";
 	
 	ofstream fout;
 	fout.open("YatchLog.txt");
