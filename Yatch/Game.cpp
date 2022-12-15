@@ -298,6 +298,7 @@ void  YatchGame::multigame()
 	if (!fout)
 	{
 		cout << "YatchLog.txt 파일을 찾지 못하였습니다." << endl;
+		return;
 	}
 
 	for (int i = 0; i < player_number; i++)
