@@ -226,7 +226,7 @@ void  YatchGame::multigame()
 			}
 			cout << endl;
 
-			preview_point(dice, player);
+			preview_point(dice, &player[j]);
 			
 			int dice_count = 2;
 			do //주사위 선택 차례
@@ -322,7 +322,7 @@ void  YatchGame::multigame()
 					cout << "주사위를 굴릴 수 있는 횟수가 없습니다." << endl;
 					break;
 				}
-				preview_point(dice, player);
+				preview_point(dice, &player[j]);
 				cout << "주사위를 더 굴리시겠습니까?(Y/N)" << endl;
 				cin >> input;
 				if (input == "Y")
@@ -344,7 +344,7 @@ void  YatchGame::multigame()
 
 			cout << "\n" << endl;
 
-			preview_point(dice, player);
+			preview_point(dice, &player[j]);
 
 			int input_int = 0;
 			while (true)

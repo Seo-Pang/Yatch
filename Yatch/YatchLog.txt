@@ -1,15 +1,15 @@
-수뭉이의 점수: 140
+수뭉이의 점수: 217
 수뭉이의 차트: 
 1 NumberChart Point: 3
-2 NumberChart Point: 4
+2 NumberChart Point: 6
 3 NumberChart Point: 6
-4 NumberChart Point: 12
-5 NumberChart Point: 0
+4 NumberChart Point: 8
+5 NumberChart Point: 15
 6 NumberChart Point: 24
-ChanceChart Point: 11
-Four of a KindChart Point: 0
+ChanceChart Point: 13
+Four of a KindChart Point: 12
 FullhouseChart Point: 25
 Small StraightChart Point: 25
 Large StraightChart Point: 30
-YatchChart Point: 0
+YatchChart Point: 50
 
