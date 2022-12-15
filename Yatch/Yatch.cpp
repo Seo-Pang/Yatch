@@ -7,6 +7,8 @@ using namespace std;
 int main()
 {
 	YatchGame game;
-	game.single_game();
+	UI::Main_menu();
+	game.multigame();
 	cout << endl;
+
 }

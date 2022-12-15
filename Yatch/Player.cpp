@@ -30,3 +30,25 @@ string Player::get_name()
 {
 	return this->name;
 }
+
+void Player::set_name(string name)
+{
+	this->name = name;
+	return;
+}
+
+int Player::calculate_total_point()
+{
+	int total = 0;
+	for (int i = 0; i < 12; i++)
+	{
+		total += cht[i]->get_point();
+	}
+	this->point = total;
+	return total;
+}
+
+int Player::get_point()
+{
+	return this->point;
+}

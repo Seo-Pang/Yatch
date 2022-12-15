@@ -15,5 +15,7 @@ public:
 	Player();
 	Player(string name);
 	string get_name();
-
+	void set_name(string name);
+	int calculate_total_point();
+	int get_point();
 };
