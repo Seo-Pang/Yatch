@@ -29,84 +29,86 @@ void YatchGame::preview_point(Dice dice_list[], Player* player)
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 14);
 			switch (i + 1) {
 				case 1:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 2:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 3:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 4:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 5:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 6:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 7:
-					cout << "            |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "            |   Chart Point : ";
 					break;
 				case 8:
-					cout << "    |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "    |   Chart Point : ";
 					break;
 				case 9:
-					cout << "         |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "         |   Chart Point : ";
 					break;
 				case 10:
-					cout << "   |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "   |   Chart Point : ";
 					break;
 				case 11:
-					cout << "   |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "   |   Chart Point : ";
 					break;
 				case 12:
-					cout << "            |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "            |   Chart Point : ";
 					break;
 			}
+			cout << player->cht[i]->get_point() << endl;
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 		}
 		else {
 			cout << "[" << i + 1 << "]" << this->cht[i]->get_info();
 			switch (i + 1) {
 				case 1:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 2:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 3:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 4:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 5:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 6:
-					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "          |   Chart Point : ";
 					break;
 				case 7:
-					cout << "            |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "            |   Chart Point : ";
 					break;
 				case 8:
-					cout << "    |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "    |   Chart Point : ";
 					break;
 				case 9:
-					cout << "         |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "         |   Chart Point : ";
 					break;
 				case 10:
-					cout << "   |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "   |   Chart Point : ";
 					break;
 				case 11:
-					cout << "   |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "   |   Chart Point : ";
 					break;
 				case 12:
-					cout << "            |   Chart Point : " << player->cht[i]->get_point() << endl;
+					cout << "            |   Chart Point : ";
 					break;
 			}
+			cout << this->cht[i]->get_point() << endl;
 		}
 	}
 
