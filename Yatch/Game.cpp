@@ -19,13 +19,98 @@ YatchGame::YatchGame()
 	this->cht[11] = new YatchChart();
 }
 
-void YatchGame::preview_point(Dice dice_list[])
+void YatchGame::preview_point(Dice dice_list[], Player* player)
 {
 	for (int i = 0; i < 12; i++)
 	{
 		this->cht[i]->charting(dice_list);
-		cout << "[" << i+1 << "]" << this->cht[i]->get_info() << " Chart Point : " << this->cht[i]->get_point() << endl;
+		if (player->cht[i]->get_used() == true) {
+			cout << "[" << i + 1 << "]" << player->cht[i]->get_info();
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 14);
+			switch (i + 1) {
+				case 1:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 2:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 3:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 4:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 5:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 6:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 7:
+					cout << "            |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 8:
+					cout << "    |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 9:
+					cout << "         |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 10:
+					cout << "   |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 11:
+					cout << "   |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 12:
+					cout << "            |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+			}
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+		}
+		else {
+			cout << "[" << i + 1 << "]" << this->cht[i]->get_info();
+			switch (i + 1) {
+				case 1:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 2:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 3:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 4:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 5:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 6:
+					cout << "          |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 7:
+					cout << "            |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 8:
+					cout << "    |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 9:
+					cout << "         |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 10:
+					cout << "   |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 11:
+					cout << "   |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+				case 12:
+					cout << "            |   Chart Point : " << player->cht[i]->get_point() << endl;
+					break;
+			}
+		}
 	}
+
+	cout << "Total Point : " << player->calculate_total_point() << endl;
 }
 
 //Single Game
@@ -67,7 +152,7 @@ int YatchGame::single_game()
 			}
 			cout << endl;
 
-			preview_point(dc);
+			preview_point(dc, player);
 
 		} while (input);
 
@@ -110,14 +195,14 @@ void  YatchGame::multigame()
 	Dice dice[5];
 	string input = "";
 	system("cls");
-	cout << "플레이어 수를 입력해주세요" << endl;
+	cout << "플레이어 수를 입력해주세요 >> ";
 	cin >> this->player_number;
 
 	Player* player = new Player[this->player_number];
 
 	for (int i = 0; i < player_number; i++)
 	{
-		cout << i+1 << "번째 플레이어의 이름을 입력해주세요" << endl;
+		cout << i+1 << "번째 플레이어의 이름을 입력해주세요 >> ";
 		cin >> input;
 		player[i].set_name(input);
 	}
@@ -128,9 +213,9 @@ void  YatchGame::multigame()
 		{
 			system("cls");
 			cout << "플레이어::" << player[j].get_name() 
-				<< "의 " << i<< "번째 차례입니다." << endl;
+				<< "의 " << i<< "번째 차례입니다.\n" << endl;
 
-			cout << "주사위를 돌립니다. " << endl
+			cout << "주사위를 돌립니다.\n" << endl
 				<< "DICE: ";
 			for (int i = 0; i < 5; i++)
 			{
@@ -139,9 +224,9 @@ void  YatchGame::multigame()
 			}
 			cout << endl;
 
-			preview_point(dice);
+			preview_point(dice, player);
 			
-			int dice_count = 3;
+			int dice_count = 2;
 			do //주사위 선택 차례
 			{
 				vector <int> dice_vector;
@@ -235,7 +320,7 @@ void  YatchGame::multigame()
 					cout << "주사위를 굴릴 수 있는 횟수가 없습니다." << endl;
 					break;
 				}
-				preview_point(dice);
+				preview_point(dice, player);
 				cout << "주사위를 더 굴리시겠습니까?(Y/N)" << endl;
 				cin >> input;
 				if (input == "Y")
@@ -250,7 +335,14 @@ void  YatchGame::multigame()
 			} while (dice_count > 0);
 
 			system("cls");
-			preview_point(dice);
+			for (int i = 0; i < 5; i++)
+			{
+				cout << i + 1 << ":[" << dice[i].get_eyes() << "] ";
+			}
+
+			cout << "\n" << endl;
+
+			preview_point(dice, player);
 
 			int input_int = 0;
 			while (true)

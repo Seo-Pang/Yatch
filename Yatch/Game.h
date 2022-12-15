@@ -6,6 +6,7 @@
 #include <vector>
 #include <algorithm>
 #include <fstream>
+#include <windows.h>
 
 class YatchGame
 {
@@ -14,7 +15,7 @@ private:
 public:
 	Chart* cht[12];
 
-	void preview_point(Dice dice_list[]);
+	void preview_point(Dice dice_list[], Player* player);
 	int single_game();
 	void multigame();
 	YatchGame();
