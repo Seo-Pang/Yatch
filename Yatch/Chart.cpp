@@ -49,6 +49,10 @@ int Chart::get_point()
 	return this->point;
 }
 
+void Chart::set_UIpoint(int n) {
+	set_point(n);
+}
+
 void Chart::set_used()
 {
 	this->is_used = true;
