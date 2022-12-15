@@ -40,9 +40,16 @@ void Player::set_name(string name)
 int Player::calculate_total_point()
 {
 	int total = 0;
+	int check_bonus = 0;
 	for (int i = 0; i < 12; i++)
 	{
+		if (i <= 5) {
+			check_bonus += cht[i]->get_point();
+		}
 		total += cht[i]->get_point();
+	}
+	if (check_bonus >= 63) {
+		total += 35;
 	}
 	this->point = total;
 	return total;
